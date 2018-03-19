@@ -4,6 +4,6 @@
 }
 
 0.0.0.0:8080 {
-  log / stdout "{remote} - [{when_iso}] \"{method} {uri} {proto}\" {status} {size} {host} {rewrite_uri}"
+  log / stdout "[{when_iso}] {method} {host} {uri} --> {$TARGET} {rewrite_uri} {status} {size}"
   proxy / {$TARGET}
 }
