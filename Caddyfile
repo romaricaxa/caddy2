@@ -4,6 +4,5 @@
 }
 
 0.0.0.0:8080 {
-  log / stdout "[{when_iso}] {method} {host} {uri} --> {upstream} {rewrite_uri} {status} {size}"
-  proxy /ws/fr-apiclient-v1-vs/api/ {$TARGET}
+    proxy / {$TARGET}
 }
