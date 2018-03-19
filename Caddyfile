@@ -4,5 +4,7 @@
 }
 
 0.0.0.0:8080 {
-    proxy / {$TARGET}
+    proxy / {$TARGET} {
+        insecure_skip_verify
+    }
 }
